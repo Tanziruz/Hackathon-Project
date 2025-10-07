@@ -1,5 +1,4 @@
 import { usePlane } from "@react-three/cannon";
-import Player from "./playerBro/player";
 
 export default function Plane() {
   const [ref] = usePlane(() => ({
@@ -11,10 +10,8 @@ export default function Plane() {
     <>
       <mesh ref={ref} receiveShadow>
         <planeGeometry args={[1000, 1000]} />
-        <meshPhongMaterial color="#3a5f0b" />
+        <meshStandardMaterial color="#3a5f0b" />
       </mesh>
-
-      <Player />
     </>
   );
 }
